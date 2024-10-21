@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <p>Enter your date of birth and the date up to which to check your age:</p>
+        
+        <div class="date-inputs">
+            <label for="dob-day">Date of Birth:</label>
+            <select id="dob-day" class="input-date"></select>
+            <select id="dob-month" class="input-date" onchange="updateDays('dob')"></select>
+            <select id="dob-year" class="input-date" onchange="updateDays('dob')"></select><br><br>
+        </div>
+
+        <div class="date-inputs">
+            <label for="ref-day">Check Age Up to Date:</label>
+            <select id="ref-day" class="input-date"></select>
+            <select id="ref-month" class="input-date" onchange="updateDays('ref')"></select>
+            <select id="ref-year" class="input-date" onchange="updateDays('ref')"></select><br><br>
+        </div>
+
+        <button onclick="calculateAge()" class="calculate-btn">Calculate Age</button>
+
+        <div id="age-result" class="result"></div>
+
+        <div id="live-seconds" class="live-seconds"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
